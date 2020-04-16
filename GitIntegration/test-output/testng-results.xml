@@ -1,17 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="2" failed="0" total="2" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="25" started-at="2020-04-16T08:29:00Z" finished-at="2020-04-16T08:29:00Z">
+  <suite name="Suite" duration-ms="18" started-at="2020-04-16T10:04:11Z" finished-at="2020-04-16T10:04:11Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="25" started-at="2020-04-16T08:29:00Z" finished-at="2020-04-16T08:29:00Z">
-      <class name="demo.Test1">
-        <test-method status="PASS" signature="f()[pri:0, instance:demo.Test1@548a9f61]" name="f" duration-ms="7" started-at="2020-04-16T13:59:00Z" finished-at="2020-04-16T13:59:00Z">
+    <test name="TS_Login" duration-ms="18" started-at="2020-04-16T10:04:11Z" finished-at="2020-04-16T10:04:11Z">
+      <class name="tests.TS_Login">
+        <test-method status="FAIL" signature="setup(java.lang.String)[pri:0, instance:tests.TS_Login@cc285f4]" name="setup" is-config="true" duration-ms="0" started-at="2020-04-16T15:34:11Z" finished-at="2020-04-16T15:34:11Z">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browser' is required by @Configuration on method setup but has not been marked @Optional or defined
+in C:\Users\Vrushali\git\GitJenkinsIntegration\GitIntegration\testng.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by @Configuration on method setup but has not been marked @Optional or defined
+in C:\Users\Vrushali\git\GitJenkinsIntegration\GitIntegration\testng.xml
+	at org.testng.internal.Parameters.createParameters(Parameters.java:156)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:363)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:86)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:202)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:143)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1264)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1189)
+	at org.testng.TestNG.runSuites(TestNG.java:1104)
+	at org.testng.TestNG.run(TestNG.java:1076)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- f -->
-      </class> <!-- demo.Test1 -->
-    </test> <!-- Test -->
+        </test-method> <!-- setup -->
+        <test-method status="SKIP" signature="intializePageFactory()[pri:0, instance:tests.TS_Login@cc285f4]" name="intializePageFactory" duration-ms="3" started-at="2020-04-16T15:34:11Z" finished-at="2020-04-16T15:34:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intializePageFactory -->
+        <test-method status="SKIP" signature="login()[pri:1, instance:tests.TS_Login@cc285f4]" name="login" duration-ms="1" started-at="2020-04-16T15:34:11Z" finished-at="2020-04-16T15:34:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="SKIP" signature="tearDown()[pri:0, instance:tests.TS_Login@cc285f4]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-04-16T15:34:11Z" finished-at="2020-04-16T15:34:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.TS_Login -->
+    </test> <!-- TS_Login -->
   </suite> <!-- Suite -->
 </testng-results>

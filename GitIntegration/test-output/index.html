@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-skipped">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,  2 skipped,  </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
                     </span>
-                    <div class="method-list-content passed suite-Suite">
+                    <div class="method-list-content skipped suite-Suite">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="demo.Test1" hash-for-method="f">f</a> <!-- method navigator-link -->
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="tests.TS_Login" hash-for-method="intializePageFactory">intializePageFactory</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Suite -->
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="tests.TS_Login" hash-for-method="login">login</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,21 +122,28 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">demo.Test1</span>
+              <img src="skipped.png"/>
+              <span class="class-name">tests.TS_Login</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="f">
-                  </a> <!-- f -->
-                  <span class="method-name">f</span>
+                  <a name="intializePageFactory">
+                  </a> <!-- intializePageFactory -->
+                  <span class="method-name">intializePageFactory</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="login">
+                  </a> <!-- login -->
+                  <span class="method-name">login</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
+          </div> <!-- suite-Suite-class-skipped -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -142,11 +154,12 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
-  &lt;test name=&quot;Test&quot;&gt;
+  &lt;test name=&quot;TS_Login&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;demo.Test1&quot;/&gt;
+      &lt;class name=&quot;tests.TS_Login&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test --&gt;
+  &lt;/test&gt; &lt;!-- TS_Login --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -158,7 +171,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (1 class)</span>
+                <span class="test-name">TS_Login (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -184,16 +197,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'f')
-data.setCell(0, 2, 'demo.Test1')
-data.setCell(0, 3, 7);
+data.setCell(0, 1, 'intializePageFactory')
+data.setCell(0, 2, 'tests.TS_Login')
+data.setCell(0, 3, 3);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'login')
+data.setCell(1, 2, 'tests.TS_Login')
+data.setCell(1, 3, 1);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 7 ms</span>
+              <span class="suite-total-time">Total running time: 4 ms</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -219,10 +236,14 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">demo.Test1</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">tests.TS_Login</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">f</span>
+                <span class="method-name">intializePageFactory</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">login</span>
+                <span class="method-start">5 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
